@@ -79,10 +79,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="MainTest.cpp" />
-    <ClCompile Include="Problem1.cpp" />
-    <ClCompile Include="Problem2.cpp" />
-    <ClCompile Include="Problem3.cpp" />
-    <ClCompile Include="Problem4.cpp" />
+    <ClCompile Include="PrimeNumber.cpp" />
+    <ClCompile Include="TimeComplexity.cpp" />
+    <ClCompile Include="TwoSum.cpp" />
+    <ClCompile Include="Search.cpp" />
+    <ClCompile Include="nPrime.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FunctionHeaders.h" />

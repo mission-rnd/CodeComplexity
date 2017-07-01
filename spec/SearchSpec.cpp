@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "../src/Problem4.cpp"
+#include "../src/Search.cpp"
 
 using namespace System;
 using namespace System::Text;
@@ -9,7 +9,7 @@ using namespace Microsoft::VisualStudio::TestTools::UnitTesting;
 namespace spec
 {
 	[TestClass]
-	public ref class Problem4Spec
+	public ref class SearchSpec
 	{
 	private:
 		TestContext^ testContextInstance;
@@ -52,56 +52,60 @@ namespace spec
 		//void MyTestCleanup() {};
 		//
 #pragma endregion 
-
-		void CompareArraysSpecP4(int *expectedArray, int *actualArray, int len){
+		void initArray(int *arr,int len) {
 			int i = 0;
 			for (i = 0; i < len; i++){
-				Assert::AreEqual(expectedArray[i], actualArray[i], L"Failed in Comparing Array Elements ", 1, 2);
+				arr[i] = i;
 			}
 		}
-
-		void CompareIntSpecP4(int expected, int actual){
-			Assert::AreEqual(expected, actual, L"Failed for Comparing Ints  ", 1, 2);
-		}
-		[TestMethod,Timeout(1000)]
-		void Sample1_Problem4()
+		[TestMethod ,Timeout(1000)]
+		void Search_Test1()
 		{
-			int *actualArray = getSquareLeaderArray(NULL, -1,NULL);
-			if (actualArray != NULL){
-				Assert::Fail();
-			}
+			int expectedIndex = 987;
+			int key = expectedIndex;
+			int arr[1000] = { 0 };
+			int len = 1000;
+			initArray(arr, len);
+			int actualIndex = linearSearch(arr, len, key);
+			Assert::AreEqual(expectedIndex, actualIndex, L"Linear Search Fail", 1, 2);
+
+			int actualIndex2 = binarySearch(arr, len, key);
+			Assert::AreEqual(expectedIndex, actualIndex2, L"Binary Search Fail", 1, 2);
 		};
 
 		[TestMethod, Timeout(1000)]
-		void Sample2_Problem4()
+		void Search_Test2()
 		{
-			int arr[10] = { 1, 5, 10, 89, 145, 204, 5555, 2342, 1234, 999 };
-			int len = 10;
-			int ansLen = 0;
-			int expectedArray[100] = { 1,10,5555 };
-			int expectedLen = 3;
+			int expectedIndex = 9879;
+			int key = expectedIndex;
+			int arr[10000] = { 0 };
+			int len = 10000;
+			initArray(arr, len);
+			arr[expectedIndex] = key;
+			int actualIndex = linearSearch(arr, len, key);
+			Assert::AreEqual(expectedIndex, actualIndex, L"Linear Search Fail", 1, 2);
 
-			int *ans = getSquareLeaderArray(arr, len, &ansLen);
-			
-			CompareIntSpecP4(expectedLen, ansLen);
-			CompareArraysSpecP4(expectedArray, ans, expectedLen);
+			int actualIndex2 = binarySearch(arr, len, key);
+			Assert::AreEqual(expectedIndex, actualIndex2, L"Binary Search Fail", 1, 2);
 		};
 
 		[TestMethod, Timeout(1000)]
-		void Sample3_Problem4()
+		void Search_Test3()
 		{
-			int arr[10] = { 444,444,367,445,134,103,219,983,999,950 };
-			int len = 10;
-			int ansLen = 0;
-			int expectedArray[100] = { 367,103,219 };
-			int expectedLen = 3;
+			int expectedIndex = 98799;
+			int key = expectedIndex;
+			int arr[100000] = { 0 };
+			int len = 100000;
+			initArray(arr, len);
+			arr[expectedIndex] = key;
+			int numberOfTimes = 100000;
+			for (int i = 0; i < numberOfTimes; i++){
 
-			int *ans = getSquareLeaderArray(arr, len, &ansLen);
-
-			CompareIntSpecP4(expectedLen, ansLen);
-			CompareArraysSpecP4(expectedArray, ans, expectedLen);
+				int actualIndex2 = binarySearch(arr, len, key);
+				Assert::AreEqual(expectedIndex, actualIndex2, L"Binary Search Fail", 1, 2);
+			}
 		};
 
-
+		
 	};
 }

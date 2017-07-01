@@ -21,16 +21,19 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Problem1Spec.cpp">
+    <ClCompile Include="TwoSumSpec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Problem2Spec.cpp">
+    <ClCompile Include="nPrimeSpec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Problem3Spec.cpp">
+    <ClCompile Include="SearchSpec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Problem4Spec.cpp">
+    <ClCompile Include="TimeComplexitySpec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PrimeNumberSpec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
