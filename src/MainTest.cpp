@@ -1,6 +1,11 @@
 /*
 Complexity Lesson
 
+You are expected to run main function in this lesson multiple times, 
+for each function,play around with multiple inputs,Form random large samples of data,
+note down timings and report them in forum .We hope you learn in correct way. 
+This is the reason we allocated 10 days for this lesson
+
 How to do this lesson.
 This lesson is not about passing testcases and submitting, Its about learning how to measure your code
 how to find compelxity of your code etc. So dont just finish lesson asap, just by passing testcases,
@@ -31,6 +36,11 @@ Way1 : BruteForce :
 Way 2: Optimized :
 1000 loopCount, 1000 Elements : Time took : 3seconds.
 
+Helpful Links : (Go through these before starting lesson, Copy Paste links)
+•https://www.youtube.com/watch?v=PFd5s0bHgAQ
+•https://www.hackerearth.com/practice/basic-programming/complexity-analysis/time-and-space-complexity/tutorial/
+•http://discrete.gr/complexity/
+•Robert Sedgewick's Algorithms(4th edition)
 
 Author: Abhijith Ravuri & SVSRK Praveen
 */
