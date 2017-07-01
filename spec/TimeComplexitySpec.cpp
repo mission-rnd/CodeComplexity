@@ -125,7 +125,7 @@ namespace spec
 		}
 
 		void testfunction10() {
-			char *expectedAns = "O(n*n)";
+			char *expectedAns = "O(n^n)";
 			char *actualAns = function10(7);
 			compareStrings(expectedAns, actualAns);
 		}
