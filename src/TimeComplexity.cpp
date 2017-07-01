@@ -151,7 +151,7 @@ char* function9(int n) {
 int power(int base, int exp) {
 	int i, result = 1;
 	for (i = 1; i <= exp; i++) {
-		result *= i;
+		result *= base;
 	}
 	return result;
 }
