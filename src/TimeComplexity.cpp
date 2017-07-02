@@ -9,8 +9,10 @@ For example for function0. You need to return "O(n)";
 If exacty time complexity is 6(n*n) . You just need to return n*n.
 Rules for returning Strings :
 'O' should be capital.
-You cant write nlogn, write O(n*logn).
-Dont use ^ charecter. n^2 is to be written as n*n.
+You can't write nlogn, write O(n*logn).
+Use ^ character only if the power is not a constant. 
+n^2 is to be written as n*n.
+n^n can be written as it is.
 
 For functions taking arrays as input ,consider n as size of array.
 
@@ -151,7 +153,7 @@ char* function9(int n) {
 int power(int base, int exp) {
 	int i, result = 1;
 	for (i = 1; i <= exp; i++) {
-		result *= i;
+		result *= base;
 	}
 	return result;
 }
